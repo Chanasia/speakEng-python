@@ -17,7 +17,7 @@ def responseUrlVoice(msg, voiceActor): #return json
     }
     return requests.post(url, med).json()
 
-def playSoundUrl(url): #play sound music
+def playSoundUrl(url): #play sound
     response = requests.get(url).content
     soundArr = BytesIO(response)
     sound = AudioSegment.from_file(soundArr, format='mp3')
@@ -27,7 +27,6 @@ def playSoundUrl(url): #play sound music
 msg = input('Enter message: ')
 voiceId = int(input('Enter id voice actor: '))
 json_data = responseUrlVoice(msg, inpIdOutVoiceActor(voiceId))
-# print(json_data['URL'])
 if json_data['URL'] != '':
     playSoundUrl(json_data['URL'])
 else:
