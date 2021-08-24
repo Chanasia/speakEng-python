@@ -1,0 +1,15 @@
+-voice actor-
+Ivy
+Joanna
+Kimberly
+Salli
+Matthew
+Justin
+Kendra
+Joey
+
+//post http
+request : "POST", 'https://ttsmp3.com/makemp3_new.php'
+header  : 'Content-type', 'application/x-www-form-urlencoded'
+overiade: "application/json"
+params  : "msg=(message)&lang=(voice actor)&source=ttsmp3"
