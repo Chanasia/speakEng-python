@@ -3,7 +3,7 @@ from io import BytesIO
 from pydub.audio_segment import AudioSegment
 from pydub.playback import play
 
-def inpIdOutVoiceActor(id): #return voiceAtor string 0 - 8
+def inpIdOutVoiceActor(id): #return voiceAtor string 0 - 7
     voiceActor = ['Ivy', 'Joanna', 'Kimberly', 'Salli', 'Matthew', 'Justin', 'Kendra', 'Joey']
     return voiceActor[id]
 
@@ -22,3 +22,13 @@ def playSoundUrl(url): #play sound music
     soundArr = BytesIO(response)
     sound = AudioSegment.from_file(soundArr, format='mp3')
     play(sound)
+
+#main programs
+msg = input('Enter message: ')
+voiceId = int(input('Enter id voice actor: '))
+json_data = responseUrlVoice(msg, inpIdOutVoiceActor(voiceId))
+# print(json_data['URL'])
+if json_data['URL'] != '':
+    playSoundUrl(json_data['URL'])
+else:
+    print('No url')
