@@ -14,11 +14,11 @@ url = https://ttsmp3.com/makemp3_new.php
 - 'msg': 'Your message'
 - 'source': 'ttsmp3'
   
-Output response:
+Output response (Example):
 - "Error":0
-- "Speaker":""
+- "Speaker":"Joey"
 - "Cached":1
-- "Text":""
+- "Text":"hello word"
 - "tasktype":"direct"
 - "URL":"https:\/\/ttsmp3.com\/created_mp3\/58c8fc4ab043fe111d418d2394edf37b.mp3"
 - "MP3":"58c8fc4ab043fe111d418d2394edf37b.mp3"}
